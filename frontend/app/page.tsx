@@ -88,7 +88,7 @@ const products = [
   {
     name: "Boucles Prénom",
     price: "à partir de 20,00 €",
-    image: "/images/category-earrings.png",
+    image: "/images/product-earrings.png",
     //reviews: 18,
     slug: "boucles-prenom",
   },
