@@ -6,13 +6,9 @@ from sqlalchemy import pool
 
 from alembic import context
 
-# On importe Base
+# On importe Base et les models
 from app.database import Base
-
-# IMPORTANT :
-# on importe les modèles pour qu'Alembic les connaisse
-from app import models
-
+from app.models import Product
 
 config = context.config
 
