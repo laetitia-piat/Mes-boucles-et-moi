@@ -18,31 +18,31 @@ import {
 
 const categories = [
   {
-    title: "Colliers",
+    name: "Colliers",
     description: "Brillez avec élégance",
     image: "/images/category_necklaces.png",
     href: "/boutique/colliers",
   },
   {
-    title: "Boucles d’oreilles",
+    name: "Boucles d’oreilles",
     description: "Légères et pleines de charme",
     image: "/images/category_earrings.png",
     href: "/boutique/boucles-oreilles",
   },
   {
-    title: "Bracelets",
+    name: "Bracelets",
     description: "Délicats et raffinés",
     image: "/images/category_bracelets.png",
     href: "/boutique/bracelets",
   },
   {
-    title: "Porte-clés",
+    name: "Porte-clés",
     description: "Emportez votre magie",
     image: "/images/category-keyring.jpg",
     href: "/boutique/porte-cles",
   },
   {
-    title: "Idées cadeaux",
+    name: "Idées cadeaux",
     description: "Pour faire plaisir",
     image: "/images/category-gift.jpg",
     href: "/boutique/idees-cadeaux",
@@ -151,7 +151,7 @@ export default function HomePage() {
       <section className="relative z-20 -mt-1 px-4 sm:px-6 lg:px-10">
         <div className="mx-auto grid max-w-[1450px] gap-3 sm:grid-cols-2 lg:grid-cols-5">
           {categories.map((category) => (
-            <CategoryCard key={category.title} {...category} />
+            <CategoryCard key={category.name} {...category} />
           ))}
         </div>
       </section>
@@ -338,12 +338,12 @@ function DecorativeSparkles() {
 }
 
 function CategoryCard({
-  title,
+  name,
   description,
   image,
   href,
 }: {
-  title: string;
+  name: string;
   description: string;
   image: string;
   href: string;
@@ -356,14 +356,14 @@ function CategoryCard({
       <div className="relative w-[42%] shrink-0 overflow-hidden">
         <Image
           src={image}
-          alt={title}
+          alt={name}
           fill
           className="object-cover transition duration-500 group-hover:scale-105"
         />
       </div>
 
       <div className="flex flex-1 flex-col justify-center px-4 py-3">
-        <h2 className="font-serif text-lg uppercase text-[#df4f6b]">{title}</h2>
+        <h2 className="font-serif text-lg uppercase text-[#df4f6b]">{name}</h2>
 
         <p className="mt-2 flex items-start gap-1 text-xs text-[#333843]">
           <Sparkles className="mt-0.5 h-3 w-3 shrink-0 text-[#e89a27]" />
