@@ -1,7 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.routes import category_router
+
 app = FastAPI()
+
+app.include_router(category_router) 
 
 app.add_middleware(
     CORSMiddleware,
@@ -13,6 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/")
 def read_root():
-    return {"Message": "Mise à jour automatique!"}
+    return {"Message": "Mise à jour automatique!"} 
