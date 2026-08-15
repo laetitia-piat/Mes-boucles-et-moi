@@ -20,19 +20,19 @@ const categories = [
   {
     title: "Colliers",
     description: "Brillez avec élégance",
-    image: "/images/category.png",
+    image: "/images/category_necklaces.png",
     href: "/boutique/colliers",
   },
   {
     title: "Boucles d’oreilles",
     description: "Légères et pleines de charme",
-    image: "/images/category-earrings.png",
+    image: "/images/category_earrings.png",
     href: "/boutique/boucles-oreilles",
   },
   {
     title: "Bracelets",
     description: "Délicats et raffinés",
-    image: "/images/category-bracelet.jpg",
+    image: "/images/category_bracelets.png",
     href: "/boutique/bracelets",
   },
   {
@@ -88,7 +88,7 @@ const products = [
   {
     name: "Boucles Prénom",
     price: "à partir de 20,00 €",
-    image: "/images/product-earrings.png",
+    image: "/images/product_earrings.png",
     //reviews: 18,
     slug: "boucles-prenom",
   },
