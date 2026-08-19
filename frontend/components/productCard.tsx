@@ -42,7 +42,7 @@ export function ProductCard({
 
         <div className="px-3 py-3 text-center">
           <h3 className="font-serif text-sm">{name}</h3>
-          <p className="mt-2 text-xs">{price}</p>
+          <p className="mt-2 text-xs">à partir de {price} €</p>
 
           {/*<div className="mt-1 flex items-center justify-center gap-1">
              <div className="flex">

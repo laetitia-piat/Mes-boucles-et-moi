@@ -37,3 +37,8 @@ class Product(Base):
         Boolean,
         default=False
     )
+
+    reviews: Mapped[int] = mapped_column(
+        Integer,
+        default=0
+    )

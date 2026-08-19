@@ -10,11 +10,16 @@ type Products = {
   slug: string;
 };
 
-type ProductProps = {
-  products: Products[];
-};
+export async function ProductsSection() {
+  const response = await fetch("http://backend:8000/products/", {
+    cache: "no-store",
+  });
 
-export function ProductsSection({ products }: ProductProps) {
+  if (!response.ok) {
+    throw new Error("Impossible de récupérer les produits");
+  }
+
+  const products: Products[] = await response.json();
   return (
     <section className="relative px-4 pb-2 pt-1 sm:px-6 lg:px-10">
       <div className="mx-auto max-w-[1320px]">
