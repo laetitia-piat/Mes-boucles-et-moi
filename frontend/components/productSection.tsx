@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SectionTitle } from "./sectionTitle";
 
 type Products = {
+  id: string;
   name: string;
   price: string;
   image: string;
@@ -28,7 +29,7 @@ export async function ProductsSection() {
 
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
           {products.map((product) => (
-            <ProductCard key={product.slug} {...product} />
+            <ProductCard key={product.id} {...product} />
           ))}
         </div>
 
