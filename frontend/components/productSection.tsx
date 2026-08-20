@@ -4,12 +4,14 @@ import Link from "next/link";
 import { SectionTitle } from "./sectionTitle";
 
 type Products = {
-  id: string;
+  id: number;
   name: string;
-  price: string;
+  description: string;
+  price: number;
   image: string;
-  slug: string;
   reviews: number;
+  link: string;
+  slug: string;
 };
 
 export async function ProductsSection() {

@@ -3,10 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 type ProductCardProps = {
+  id: number;
   name: string;
-  price: string;
+  description: string;
+  price: number;
   image: string;
   reviews: number;
+  link: string;
   slug: string;
 };
 
@@ -18,7 +21,7 @@ export function ProductCard({
   slug,
 }: ProductCardProps) {
   return (
-    <article className="group relative overflow-hidden rounded-lg border border-[#eeddd5] bg-[#fffaf7]">
+    <article className="max-w-xs group relative overflow-hidden rounded-lg border border-[#eeddd5] bg-[#fffaf7]">
       <span className="absolute left-0 top-2 z-10 bg-[#ea7e8d] px-2 py-1 text-[10px] text-white">
         Personnalisable
       </span>
