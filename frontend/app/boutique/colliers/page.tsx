@@ -4,11 +4,13 @@ import { Header } from "@/components/header";
 import { ProductCard } from "@/components/productCard";
 
 export default async function NecklacesPage() {
-  const response = await fetch("http://backend:8000/products/", {
+  const response = await fetch("http://backend:8000/products/?category_id=1", {
     cache: "no-store",
   });
 
   if (!response.ok) {
+    console.log("status:", response.status);
+    console.log("body:", await response.text());
     throw new Error("Impossible de récupérer les produits");
   }
   const products = await response.json();

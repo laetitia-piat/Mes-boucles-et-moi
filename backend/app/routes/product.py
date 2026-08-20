@@ -10,6 +10,9 @@ router = APIRouter(
 )
 
 @router.get("/")
-def get_products(db: Session = Depends(get_db)):
-    products = db.query(Product).all()
+def get_products(category_id: int | None = None, db: Session = Depends(get_db)):
+    if category_id is not None:
+        products = db.query(Product).filter(Product.category_id == category_id).all()
+    else:
+        products = db.query(Product).all()
     return products

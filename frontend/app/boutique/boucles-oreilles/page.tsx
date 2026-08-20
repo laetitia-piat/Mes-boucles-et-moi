@@ -4,7 +4,7 @@ import { Header } from "@/components/header";
 import { ProductCard } from "@/components/productCard";
 
 export default async function EarringsPage() {
-  const response = await fetch("http://backend:8000/products/", {
+  const response = await fetch("http://backend:8000/products/?category_id=2", {
     cache: "no-store",
   });
 
