@@ -2,6 +2,7 @@ import { AnnouncementBar } from "@/components/announcementBar";
 import { BoutiqueCategories } from "@/components/boutiqueCategory";
 import { Header } from "@/components/header";
 import { ProductCard } from "@/components/productCard";
+import { getProducts } from "@/lib/api/product";
 
 type Product = {
   id: number;
@@ -15,14 +16,7 @@ type Product = {
 };
 
 export default async function BoutiquePage() {
-  const response = await fetch("http://backend:8000/products/", {
-    cache: "no-store",
-  });
-
-  if (!response.ok) {
-    throw new Error("Impossible de récupérer les produits");
-  }
-  const products: Product[] = await response.json();
+  const products = await getProducts();
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#fffdfb] text-[#182132]">
@@ -30,7 +24,7 @@ export default async function BoutiquePage() {
       <Header />
       <BoutiqueCategories />
       <div className="max-w-[1320px] mx-auto grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
-        {products.map((product) => (
+        {products.map((product: Product) => (
           <ProductCard key={product.id} {...product} />
         ))}
       </div>

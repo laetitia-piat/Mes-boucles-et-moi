@@ -2,6 +2,7 @@ import { PawPrint } from "lucide-react";
 import { ProductCard } from "./productCard";
 import Link from "next/link";
 import { SectionTitle } from "./sectionTitle";
+import { getProducts } from "@/lib/api/product";
 
 type Products = {
   id: number;
@@ -15,22 +16,15 @@ type Products = {
 };
 
 export async function ProductsSection() {
-  const response = await fetch("http://backend:8000/products/", {
-    cache: "no-store",
-  });
+  const products = await getProducts();
 
-  if (!response.ok) {
-    throw new Error("Impossible de récupérer les produits");
-  }
-
-  const products: Products[] = await response.json();
   return (
     <section className="relative px-4 pb-2 pt-1 sm:px-6 lg:px-10">
       <div className="mx-auto max-w-[1320px]">
         <SectionTitle title="Nos best-sellers" />
 
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
-          {products.map((product) => (
+          {products.map((product: Products) => (
             <ProductCard key={product.id} {...product} />
           ))}
         </div>

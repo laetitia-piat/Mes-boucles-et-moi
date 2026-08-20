@@ -4,6 +4,7 @@ import { CategoryCard } from "@/components/categoryCard";
 import { HeroSection } from "@/components/heroSection";
 import { StorySection } from "@/components/storySection";
 import { ProductsSection } from "@/components/productSection";
+import { getCategories } from "@/lib/api/category";
 
 type Category = {
   id: number;
@@ -14,15 +15,7 @@ type Category = {
 };
 
 export default async function HomePage() {
-  const response = await fetch("http://backend:8000/categories/", {
-    cache: "no-store",
-  });
-
-  if (!response.ok) {
-    throw new Error("Impossible de récupérer les catégories");
-  }
-
-  const categories: Category[] = await response.json();
+  const categories = await getCategories();
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#fffdfb] text-[#182132]">
@@ -33,7 +26,7 @@ export default async function HomePage() {
 
       <section className="relative z-20 -mt-1 px-4 sm:px-6 lg:px-10">
         <div className="mx-auto grid max-w-[1450px] gap-3 sm:grid-cols-2 lg:grid-cols-5">
-          {categories.map((category) => (
+          {categories.map((category: Category) => (
             <CategoryCard key={category.name} {...category} />
           ))}
         </div>

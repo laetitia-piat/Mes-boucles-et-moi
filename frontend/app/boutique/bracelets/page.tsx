@@ -2,17 +2,10 @@ import { AnnouncementBar } from "@/components/announcementBar";
 import { BoutiqueCategories } from "@/components/boutiqueCategory";
 import { Header } from "@/components/header";
 import { ProductCard } from "@/components/productCard";
+import { getProductsByCategory } from "@/lib/api/product";
 
 export default async function BraceletsPage() {
-  const response = await fetch("http://backend:8000/products/?category_id=3", {
-    cache: "no-store",
-  });
-
-  if (!response.ok) {
-    throw new Error("Impossible de récupérer les produits");
-  }
-  const products = await response.json();
-  console.log(products);
+  const products = await getProductsByCategory(3);
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#fffdfb] text-[#182132]">

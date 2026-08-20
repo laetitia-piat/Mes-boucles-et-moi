@@ -1,3 +1,4 @@
+import { getCategories } from "@/lib/api/category";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,15 +10,7 @@ type Category = {
 };
 
 export async function BoutiqueCategories() {
-  const response = await fetch("http://backend:8000/categories/", {
-    cache: "no-store",
-  });
-
-  if (!response.ok) {
-    throw new Error("Impossible de récupérer les catégories");
-  }
-
-  const categories: Category[] = await response.json();
+  const categories = await getCategories();
   return (
     <section className="bg-[#fffaf7] px-4 py-8 sm:px-6 lg:px-10">
       <div className="mx-auto max-w-[1200px]">
@@ -32,7 +25,7 @@ export async function BoutiqueCategories() {
         </div>
 
         <div className="grid grid-cols-3 gap-x-4 gap-y-5 sm:grid-cols-5">
-          {categories.map((category) => (
+          {categories.map((category: Category) => (
             <Link
               key={category.name}
               href={category.link}
