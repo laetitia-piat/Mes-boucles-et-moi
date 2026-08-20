@@ -8,6 +8,7 @@ type Products = {
   price: string;
   image: string;
   slug: string;
+  reviews: number;
 };
 
 export async function ProductsSection() {
