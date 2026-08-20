@@ -37,7 +37,7 @@ export function ProductCard({
             src={image}
             alt={name}
             fill
-            className="object-cover transition duration-500 group-hover:scale-105"
+            className="object-contain transition duration-500 group-hover:scale-105"
           />
         </div>
 

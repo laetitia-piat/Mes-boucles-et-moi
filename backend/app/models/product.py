@@ -1,5 +1,5 @@
-from sqlalchemy import String, Text, Float, Integer, Boolean
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy import ForeignKey, String, Text, Float, Integer, Boolean
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from ..database import Base
 
@@ -41,4 +41,13 @@ class Product(Base):
     reviews: Mapped[int] = mapped_column(
         Integer,
         default=0
+    )
+    category_id: Mapped[int] = mapped_column(
+        ForeignKey("categories.id"),
+        nullable=False
+    )
+
+    category = relationship(
+        "Category",
+        back_populates="products"
     )

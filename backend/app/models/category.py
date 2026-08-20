@@ -1,5 +1,5 @@
 from sqlalchemy import String, Text
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from ..database import Base
 
@@ -11,3 +11,4 @@ class Category(Base):
     description: Mapped[str | None] = mapped_column(Text, nullable=True)
     image: Mapped[str | None] = mapped_column(String(500), nullable=True)
     link: Mapped[str | None] = mapped_column(String(200), nullable=True)
+    products = relationship("Product",back_populates="category")
