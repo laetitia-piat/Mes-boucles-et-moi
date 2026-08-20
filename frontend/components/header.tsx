@@ -109,6 +109,14 @@ export function Header() {
               >
                 Journal
               </Link>
+
+              <Link
+                href="/contact"
+                onClick={() => setMenuOpen(false)}
+                className="w-full rounded-lg px-4 py-3 text-center transition hover:bg-[#fcebee]"
+              >
+                Contact
+              </Link>
             </div>
           </nav>
         )}
