@@ -16,3 +16,10 @@ def get_products(category_id: int | None = None, db: Session = Depends(get_db)):
     else:
         products = db.query(Product).all()
     return products
+
+@router.get("/{product_id}")
+def get_product(product_id: int, db: Session = Depends(get_db)):
+    product = db.query(Product).filter(Product.id == product_id).first()
+    if product is None:
+        return {"error": "Product not found"}
+    return product

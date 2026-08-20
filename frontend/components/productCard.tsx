@@ -14,6 +14,7 @@ type ProductCardProps = {
 };
 
 export function ProductCard({
+  id,
   name,
   price,
   image,
@@ -34,7 +35,7 @@ export function ProductCard({
         <Heart className="h-4 w-4 stroke-[1.4] text-[#62554f]" />
       </button>
 
-      <Link href={`/produit/${slug}`}>
+      <Link href={`/produit/${id}`}>
         <div className="relative aspect-[1.08/1] overflow-hidden bg-[#f4ebe5]">
           <Image
             src={image}
