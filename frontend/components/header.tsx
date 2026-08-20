@@ -48,7 +48,9 @@ export function Header() {
           </HeaderIcon>
 
           <HeaderIcon label="Mon panier" badge={0}>
-            <ShoppingBag />
+            <NavLink href="/panier">
+              <ShoppingBag />
+            </NavLink>
           </HeaderIcon>
 
           <button
