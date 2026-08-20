@@ -1,4 +1,4 @@
-function succesPage() {
+export default function succesPage() {
   return (
     <div>
       <h1>Commande réussie</h1>

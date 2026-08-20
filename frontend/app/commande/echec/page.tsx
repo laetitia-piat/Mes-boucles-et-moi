@@ -1,4 +1,4 @@
-function EchecPage() {
+export default function EchecPage() {
   return (
     <div>
       <h1>Échec de la commande</h1>
