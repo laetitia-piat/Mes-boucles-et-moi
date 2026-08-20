@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, Heart, Menu, ShoppingBag } from "lucide-react";
+import { Heart, Menu, ShoppingBag } from "lucide-react";
 import { NavLink } from "./navLink";
 import { HeaderIcon } from "./headerIcon";
 
@@ -19,17 +19,8 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-10 lg:flex">
-          <NavLink href="/" active>
-            Accueil
-          </NavLink>
-
-          <NavLink href="/boutique">
-            <span className="flex items-center gap-1">
-              Boutique
-              <ChevronDown className="h-4 w-4" />
-            </span>
-          </NavLink>
-
+          <NavLink href="/">Accueil</NavLink>
+          <NavLink href="/boutique">Boutique</NavLink>
           <NavLink href="/personnalisation">Personnalisation</NavLink>
           <NavLink href="/a-propos">À propos</NavLink>
           <NavLink href="/journal">Journal</NavLink>
