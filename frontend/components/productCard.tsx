@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+import { Heart, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,6 +6,7 @@ type ProductCardProps = {
   name: string;
   price: string;
   image: string;
+  reviews: number;
   slug: string;
 };
 
@@ -13,7 +14,7 @@ export function ProductCard({
   name,
   price,
   image,
-  //reviews,
+  reviews,
   slug,
 }: ProductCardProps) {
   return (
@@ -44,8 +45,8 @@ export function ProductCard({
           <h3 className="font-serif text-sm">{name}</h3>
           <p className="mt-2 text-xs">à partir de {price} €</p>
 
-          {/*<div className="mt-1 flex items-center justify-center gap-1">
-             <div className="flex">
+          <div className="mt-1 flex items-center justify-center gap-1">
+            <div className="flex">
               {Array.from({ length: 5 }).map((_, index) => (
                 <Star
                   key={index}
@@ -53,8 +54,8 @@ export function ProductCard({
                 />
               ))}
             </div>
-             <span className="text-[10px] text-[#4a4644]">({reviews})</span> 
-          </div> */}
+            <span className="text-[10px] text-[#4a4644]">({reviews})</span>
+          </div>
         </div>
       </Link>
     </article>
