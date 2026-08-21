@@ -35,7 +35,14 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${allura.variable} ${cormorant.variable} ${lora.variable}`}
+        style={{
+          backgroundImage: "url('/images/background.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center bottom",
+          backgroundRepeat: "no-repeat",
+          //backgroundAttachment: "fixed",
+        }}
+        className="min-h-screen bg-[#fffaf7]"
       >
         {children}
       </body>

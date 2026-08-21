@@ -18,7 +18,7 @@ export default async function HomePage() {
   const categories = await getCategories();
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#fffdfb] text-[#182132]">
+    <main className="min-h-screen overflow-hidden text-[#182132]">
       <AnnouncementBar />
       <Header />
 

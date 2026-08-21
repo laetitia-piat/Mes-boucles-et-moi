@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function HeroSection() {
   return (
-    <section className="relative z-0 mb-10 overflow-hidden border-b border-[#efd8d2] bg-[radial-gradient(circle_at_center,#fffdfa_0%,#fff8f4_55%,#fceae7_100%)]">
+    <section className="relative z-0 mb-10 overflow-hidden ">
       <div className="relative mx-auto grid min-h-[150px] max-w-[1450px] items-center px-4 py-10 sm:px-6 lg:min-h-[350px] lg:grid-cols-2 lg:px-10">
         <Image
           src="/images/hero-background.png"

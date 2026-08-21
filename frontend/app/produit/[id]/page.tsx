@@ -11,7 +11,7 @@ export default async function productDetailsPage({ params }: Props) {
   const product = await getProduct(Number(id));
   console.log("product", product);
   return (
-    <main className="min-h-screen overflow-hidden bg-[#fffdfb] text-[#182132]">
+    <main className="min-h-screen overflow-hidden text-[#182132]">
       <AnnouncementBar />
       <Header />
       <div className="mx-auto max-w-[1450px] py-10">

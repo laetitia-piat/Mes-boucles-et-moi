@@ -8,7 +8,7 @@ export default async function KeyRingsPage() {
   const products = await getProductsByCategory(4);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#fffdfb] text-[#182132]">
+    <main className="min-h-screen overflow-hidden text-[#182132]">
       <AnnouncementBar />
       <Header />
       <BoutiqueCategories />

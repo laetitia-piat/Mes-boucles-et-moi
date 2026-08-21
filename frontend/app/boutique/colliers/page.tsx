@@ -7,7 +7,7 @@ import { getProductsByCategory } from "@/lib/api/product";
 export default async function NecklacesPage() {
   const products = await getProductsByCategory(1);
   return (
-    <main className="min-h-screen overflow-hidden bg-[#fffdfb] text-[#182132]">
+    <main className="min-h-screen overflow-hidden text-[#182132]">
       <AnnouncementBar />
       <Header />
       <BoutiqueCategories />
