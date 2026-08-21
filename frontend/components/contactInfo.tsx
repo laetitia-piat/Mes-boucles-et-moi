@@ -2,12 +2,14 @@ type ContactInfoProps = {
   icon: React.ReactNode;
   title: string;
   content: string;
+  link?: string;
 };
 
 export default function ContactInfo({
   icon,
   title,
   content,
+  link,
 }: ContactInfoProps) {
   return (
     <div className="flex items-center gap-5">
@@ -16,9 +18,19 @@ export default function ContactInfo({
       </div>
 
       <div>
-        <h2 className="font-serif text-xl font-semibold">{title}</h2>
+        {link ? (
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <h2 className="font-serif text-xl font-semibold">{title}</h2>
 
-        <p className="mt-1 text-lg text-[#53545a]">{content}</p>
+            <p className="mt-1 text-lg text-[#53545a]">{content}</p>
+          </a>
+        ) : (
+          <>
+            <h2 className="font-serif text-xl font-semibold">{title}</h2>
+
+            <p className="mt-1 text-lg text-[#53545a]">{content}</p>
+          </>
+        )}
       </div>
     </div>
   );

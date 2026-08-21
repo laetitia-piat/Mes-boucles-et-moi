@@ -4,7 +4,7 @@ import { Header } from "@/components/header";
 import { HeroSection } from "@/components/heroSection";
 import { StorySection } from "@/components/storySection";
 import { useState } from "react";
-import { Mail, MapPin, Send } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import ContactInfo from "@/components/contactInfo";
 import { FaInstagram } from "react-icons/fa";
 
@@ -83,7 +83,8 @@ export default function contactPage() {
                 <ContactInfo
                   icon={<FaInstagram className="h-7 w-7" />}
                   title="Instagram"
-                  content="@mesbouclesetmoi"
+                  content="mesboucles_et_moi_candice_g"
+                  link="https://www.instagram.com/mesboucles_et_moi_candice_g/"
                 />
 
                 <ContactInfo
