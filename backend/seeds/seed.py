@@ -34,10 +34,10 @@ CATEGORIES = [
     },
     {
         "id": 5,
-        "name": "Idées cadeaux",
+        "name": "Collections",
         "description": "Pour faire plaisir",
         "image": "/images/category-gift.png",
-        "link": "/boutique/idees-cadeaux",
+        "link": "/boutique/collections",
     },
 ]
 
