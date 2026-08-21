@@ -6,6 +6,7 @@ import { StorySection } from "@/components/storySection";
 import { useState } from "react";
 import { Mail, MapPin, Send } from "lucide-react";
 import ContactInfo from "@/components/contactInfo";
+import { FaInstagram } from "react-icons/fa";
 
 export default function contactPage() {
   const [loading, setLoading] = useState(false);
@@ -79,11 +80,11 @@ export default function contactPage() {
                   content="bonjour@mesbouclesetmoi.fr"
                 />
 
-                {/*    <ContactInfo
-                  icon={< className="h-7 w-7" />}
+                <ContactInfo
+                  icon={<FaInstagram className="h-7 w-7" />}
                   title="Instagram"
                   content="@mesbouclesetmoi"
-                /> */}
+                />
 
                 <ContactInfo
                   icon={<MapPin className="h-7 w-7" />}
@@ -93,20 +94,17 @@ export default function contactPage() {
               </div>
 
               {/* Décoration */}
-              <div className="mt-10 flex items-end gap-4">
-                <div className="text-7xl leading-none">
+              <div className="mt-10 items-end">
+                <div className="flex flex-row justify-center leading-none">
                   <img
                     src="/images/flower.png"
                     alt="Fleur"
-                    className="h-[200px]"
+                    className="h-[150px]"
                   />
-                </div>
-
-                <div className="text-[110px] leading-none">
                   <img
                     src="/images/blackCat.png"
                     alt="Chat noir"
-                    className="h-[200px]"
+                    className="h-[150px]"
                   />
                 </div>
               </div>
