@@ -36,7 +36,7 @@ CATEGORIES = [
         "id": 5,
         "name": "Collections",
         "description": "Pour faire plaisir",
-        "image": "/images/category-gift.png",
+        "image": "/images/category-collections.png",
         "link": "/boutique/collections",
     },
 ]
