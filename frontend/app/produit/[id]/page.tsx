@@ -1,5 +1,7 @@
 import { AnnouncementBar } from "@/components/announcementBar";
 import { Header } from "@/components/header";
+import ProductDetails from "@/components/productDetails";
+import { StorySection } from "@/components/storySection";
 import { getProduct } from "@/lib/api/product";
 
 type Props = {
@@ -14,10 +16,8 @@ export default async function productDetailsPage({ params }: Props) {
     <main className="min-h-screen overflow-hidden text-[#182132]">
       <AnnouncementBar />
       <Header />
-      <div className="mx-auto max-w-[1450px] py-10">
-        <p className="text-center text-lg">Détails du produit</p>
-        <h1 className="text-center text-lg">{product.name}</h1>
-      </div>
+      <ProductDetails product={product} />
+      <StorySection />
     </main>
   );
 }
