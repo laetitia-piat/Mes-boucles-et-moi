@@ -2,6 +2,7 @@ import { AnnouncementBar } from "@/components/announcementBar";
 import { BoutiqueCategories } from "@/components/boutiqueCategory";
 import { Header } from "@/components/header";
 import { ProductCard } from "@/components/productCard";
+import { StorySection } from "@/components/storySection";
 import { getProductsByCategory } from "@/lib/api/product";
 
 export default async function NecklacesPage() {
@@ -16,6 +17,7 @@ export default async function NecklacesPage() {
           <ProductCard key={product.id} {...product} />
         ))}
       </div>
+      <StorySection />
     </main>
   );
 }

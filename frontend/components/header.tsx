@@ -9,7 +9,7 @@ import { HeaderIcon } from "./headerIcon";
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="relative z-50 border-b border-[#efdcd5] bg-[#fffdfa]/95 backdrop-blur">
+    <header className="relative z-50 backdrop-blur">
       <div className="mx-auto flex h-24 max-w-[1450px] items-center justify-between gap-6 px-4 sm:px-6 lg:px-10">
         <Link href="/" className="relative h-20 w-32 shrink-0">
           <Image

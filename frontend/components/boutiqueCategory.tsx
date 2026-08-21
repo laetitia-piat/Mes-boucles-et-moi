@@ -12,7 +12,7 @@ type Category = {
 export async function BoutiqueCategories() {
   const categories = await getCategories();
   return (
-    <section className="bg-[#fffaf7] px-4 py-8 sm:px-6 lg:px-10">
+    <section className=" px-4 py-8 sm:px-6 lg:px-10">
       <div className="mx-auto max-w-[1200px]">
         <div className="mb-7 text-center">
           <h2 className="font-script text-4xl text-[#30384a]">
